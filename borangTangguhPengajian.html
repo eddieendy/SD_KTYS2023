@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head> <!- This is the head of the html in the head part we have style tags-> 
         <meta name="viewport" content="width=device-width initial-scale =1">
@@ -7,6 +7,9 @@
             table{
                 border-collapse:collapse;
 				
+            }
+            td, tr{
+                color:white;
             }
             tr:hover
             {
@@ -17,44 +20,44 @@
         </style>
     </head>
     <body background="https://wallpaperaccess.com/full/187161.jpg"> <!- Body tag is where we add our whole content->
-        <form  name="sport's form " action="send.php" method="post"> <!- This is the form tag here we have used the action and method attributes->
+        <form  name="sport's form " action="sendBTP.php" method="post"> <!- This is the form tag here we have used the action and method attributes->
             <table width="75%" height="75%" border="1px" border-color="black" cellspacing="2" cellpadding="2" > <!- This is the table tag. It is used to create a table->
                 <tr>    <!- tr means table rows, tr tag is used to add rows to our table.->
                     <td colspan="2" align="center"><b><i>Borang Tangguh Pengajian</i></b></td> <!- td stands for table data ,td tag is used to add columns to our table.->
                 </tr>
                 <tr>
                    <td>Nama Penuh</td> 
-                   <td><input type="text" name="fname" </td> <!- We have used the input as text ->
+                   <td><input type="text" name="fullname"> </td> <!- We have used the input as text ->
                 </tr>
 				<tr>
                    <td>No IC</td> 
-                   <td><input type="text" name="fname" </td> <!- We have used the input as text ->
+                   <td><input type="text" name="nric"> </td> <!- We have used the input as text ->
                 </tr>
 				<td>Semester/Sesi</td> 
-                   <td><input type="text" name="fname"</td> <!- We have used the input as text ->
+                   <td><input type="text" name="semester"> </td> <!- We have used the input as text ->
                 </tr>
 				<td>No Matrik</td> 
-                   <td><input type="text" name="fname"</td> <!- We have used the input as text ->
+                   <td><input type="text" name="nomatrik"></td> <!- We have used the input as text ->
                 </tr>
 				<tr>
                    <td>Program</td> 
-                   <td><input type="text" name="fname"</td> <!- We have used the input as text ->
+                   <td><input type="text" name="program"> </td> <!- We have used the input as text ->
                 </tr>
 				<td>No Telefon</td> 
-                   <td><input type="text" name="fname"</td> <!- We have used the input as text ->
+                   <td><input type="text" name="no_tel"> </td> <!- We have used the input as text ->
                 </tr>
 				<td>E-mel</td> 
-                   <td><input type="text" name="fname"</td> <!- We have used the input as text ->
+                   <td><input type="text" name="email"> </td> <!- We have used the input as text ->
                 </tr>
 				<td>Keputusan Semasa:PNG</td> 
-                   <td><input type="text" name="fname"</td> <!- We have used the input as text ->
+                   <td><input type="text" name="png"> </td> <!- We have used the input as text ->
                 </tr>
 				<td>Keputusan Semasa:PNGK</td> 
-                   <td><input type="text" name="fname"</td> <!- We have used the input as text ->
+                   <td><input type="text" name="pngk"> </td> <!- We have used the input as text ->
                 </tr>
 				<td>Semester/Tahap Pengajian Semasa</td>  
                     <td>
-                        <select name="Sem">                <!- We have used the select menu here->
+                        <select name="level">                <!- We have used the select menu here->
                             <option value="S1">SEMESTER 1</option> <!- To use select menu we have to add < option > tag->
                             <option value="S2">SEMESTER 2</option>
                             <option value="S3">SEMESTER 3</option>
@@ -66,18 +69,18 @@
                     </td>
 				<tr>
                    <td>Nama Ibu/Bapa/Penjaga</td> 
-                   <td><input type="text" name="fname" </td> <!- We have used the input as text ->
+                   <td><input type="text" name="parentname"> </td> <!- We have used the input as text ->
                 </tr>
 				<tr>
                    <td>Bilangan Tangguh Pengajian</td> 
-                   <td><input type="text" name="fname" </td> <!- We have used the input as text ->
+                   <td><input type="text" name="biltangguh"> </td> <!- We have used the input as text ->
                 </tr>
 				<tr>
 				<td>Poskod</td> 
-                   <td><input type="text" name="fname"</td> <!- We have used the input as text ->
+                   <td><input type="text" name="poskod"> </td> <!- We have used the input as text ->
                 </tr>
 				<td>Daerah</td> 
-                   <td><input type="text" name="fname"</td> <!- We have used the input as text ->
+                   <td><input type="text" name="daerah"> </td> <!- We have used the input as text ->
                 </tr>
                     <td>Negeri</td>  
                     <td>
@@ -102,7 +105,7 @@
 				<tr>
                     <td>Sebab Tangguh Pengajian</td>  
                     <td>
-                        <select name="SEBAB">                <!- We have used the select menu here->
+                        <select name="sebab">                <!- We have used the select menu here->
                             <option value="MK">Masalah Kewangan</option> <!- To use select menu we have to add < option > tag->
                             <option value="MSK">Masalah Keluarga</option>
                             <option value="MB">Masalah Pembelajaran</option>

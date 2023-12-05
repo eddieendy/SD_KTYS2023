@@ -4,9 +4,9 @@
 
 <p>Click on the "Choose File" button to upload a file:</p>
 
-<form action="/action_page.php">
-  <input type="file" id="myFile" name="filename">
-  <input type="submit">
+<form method="post" action="upload.php" enctype="multipart/form-data">
+  <input type="file" id="fileToUpload" name="fileToUpload">
+  <input type="submit" name="submit" value="Upload PDF">
 </form>
 
 </body>
