@@ -21,5 +21,5 @@ email, poskod, daerah, add_kursus, del_kursus, jam_kredit)
 VALUES ('$fullname','$nric','$semester','$nomatrik','$program','$no_tel','$email','$poskod','$daerah',
 '$add_kursus','$del_kursus','$jam_kredit')");
 
-header("Location: HOMEPAGE.html");
+header("Location: HOMEPAGE.php");
 ?>
