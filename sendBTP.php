@@ -24,5 +24,5 @@ email, student_png, student_pngk, level_pengajian, parent_name, bil_tangguh, pos
 VALUES ('$fullname','$nric','$semester','$nomatrik','$program','$no_tel','$email','$png','$pngk',
 '$level','$parentname','$biltangguh','$poskod','$daerah','$negeri','$sebab')");
 
-header("Location: HOMEPAGE.html");
+header("Location: HOMEPAGE.php");
 ?>
