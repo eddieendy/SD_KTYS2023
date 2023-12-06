@@ -23,5 +23,5 @@ email, student_png, student_pngk, jam_kredit, course1, course2, course3, course4
 VALUES ('$fullname','$nric','$semester','$nomatrik','$program','$no_tel','$email','$png','$pngk',
 '$jam_kredit','$course1','$course2','$course3','$course4','$baki_kredit')");
 
-header("Location: HOMEPAGE.html");
+header("Location: HOMEPAGE.php");
 ?>
