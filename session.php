@@ -1,21 +1,55 @@
 <?php
-//before we store information of out member, we need to start frist the session
+   include('conn.php');
+   session_start();
+   
+   $user_check = $_SESSION['login_user'];
+   
+   $ses_sql = mysqli_query($con ,"select username from studentlogin where username = '$user_check' ");
+   
+   $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
+   
+   $login_session = $row['username'];
+   
+    //student info
+   $nomatrik = mysqli_query($con, "SELECT studentID FROM studentinfo WHERE studentinfo.student_name = '$login_session'");
+   $row = mysqli_fetch_array($nomatrik,MYSQLI_ASSOC);
+   $nomatrik = $row['studentID'];
 
-		session_start(); 
+   $nric = mysqli_query($con, "SELECT ic_num FROM studentinfo WHERE studentinfo.student_name = '$login_session'");
+   $row = mysqli_fetch_array($nric,MYSQLI_ASSOC);
+   $nric = $row['ic_num'];
 
-		//create a new function to check if the version variable member_id is not set
-		function logged_in(){
-			return isset($_SESSION['MEMBER_ID']);
 
-		}
-		//this function if seesion member is not set then it will be redirected to index.php
-		function confirm_logged_in(){
-			if (!logged_in()) {?>
-				<script type="text/javascript">
-						window.location = 'login.php';
-				</script>
+   $program = mysqli_query($con, "SELECT program FROM studentinfo WHERE studentinfo.student_name = '$login_session'");
+   $row = mysqli_fetch_array($program,MYSQLI_ASSOC);
+   $program = $row['program'];
 
-			<?php
-			}
-		}
+
+   $telno = mysqli_query($con, "SELECT phone_num FROM studentinfo WHERE studentinfo.student_name = '$login_session'");
+   $row = mysqli_fetch_array($telno,MYSQLI_ASSOC);
+   $telno = $row['phone_num'];
+
+
+   $course = mysqli_query($con, "SELECT course FROM studentinfo WHERE studentinfo.student_name = '$login_session'");
+   $row = mysqli_fetch_array($course,MYSQLI_ASSOC);
+   $course = $row['course'];
+
+
+   $address = mysqli_query($con, "SELECT address FROM studentinfo WHERE studentinfo.student_name = '$login_session'");
+   $row = mysqli_fetch_array($address,MYSQLI_ASSOC);
+   $address = $row['address'];
+
+
+   $penasihat = mysqli_query($con, "SELECT academic_advisor FROM studentinfo WHERE studentinfo.student_name = '$login_session'");
+   $row = mysqli_fetch_array($penasihat,MYSQLI_ASSOC);
+   $penasihat = $row['academic_advisor'];
+
+
+
+   
+
+   if(!isset($_SESSION['login_user'])){
+      header("location:login.php");
+      die();
+   }
 ?>

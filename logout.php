@@ -1,10 +1,7 @@
 <?php
-require 'connection.php';
-require 'session.php';
-
-session_destroy();
+   session_start();
+   
+   if(session_destroy()) {
+      header("Location: LogIn.php");
+   }
 ?>
-<script type="text/javascript">
-	alert("Successfully logout!");
-	window.location = "login.php";
-</script>
